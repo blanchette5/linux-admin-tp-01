@@ -20,13 +20,14 @@ systemctl status networking
 curl https://google.com
 df -h
 sudo apt update && sudo apt upgrade -y
+
 👤 Gestion des utilisateurs
 sudo adduser --system --shell /usr/sbin/nologin webuser
+
 📁 Gestion des permissions
 sudo mkdir -p /srv/web
 sudo chown -R root:webuser /srv/web
 sudo chmod 770 /srv/web
-
 sudo -u webuser ls -l /srv/web
 # test accès user standard :
 cd /srv/web
