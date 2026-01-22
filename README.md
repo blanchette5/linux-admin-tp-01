@@ -25,6 +25,14 @@ L’objectif est de démontrer :
 
 ---
 
+### Choix techniques notables
+
+- Utilisation d’un **utilisateur système dédié** au service web (`webuser`)
+- Refus volontaire d’utiliser `www-data`
+- Permissions strictes appliquées sur `/srv/web`
+
+---
+
 ## 📂 Structure du dépôt
 
 ```text
@@ -42,8 +50,3 @@ linux-admin-tp-01/
 │   └── README.md
 └── assets/         # Captures et supports
 
-### Choix techniques notables
-
-- Utilisation d’un **utilisateur système dédié** au service web (`webuser`)
-- Refus volontaire d’utiliser `www-data`
-- Permissions strictes appliquées sur `/srv/web`
