@@ -41,3 +41,9 @@ linux-admin-tp-01/
 ├── logs/           # Informations sur les logs
 │   └── README.md
 └── assets/         # Captures et supports
+
+### Choix techniques notables
+
+- Utilisation d’un **utilisateur système dédié** au service web (`webuser`)
+- Refus volontaire d’utiliser `www-data`
+- Permissions strictes appliquées sur `/srv/web`
