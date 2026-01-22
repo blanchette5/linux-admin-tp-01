@@ -50,3 +50,12 @@ linux-admin-tp-01/
 │   └── README.md
 └── assets/         # Captures et supports
 
+```
+
+### 🛠️ Compétences mises en œuvre
+- Linux (Debian)
+- Administration système
+- Sécurité système
+- Bash scripting
+- Diagnostic & exploitation
+- Documentation technique
