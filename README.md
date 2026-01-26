@@ -1,7 +1,6 @@
 # 🧪 TP Linux Professionnel — Administration Système  
-## TP2 — Exploitation & montée en charge (suite du TP1)
 
-Ce TP constitue la **suite directe du TP1**.  
+Ce projet constitue la **suite directe du TP1**.  
 Il se place dans un contexte réaliste où un **serveur Linux déjà déployé** doit être **exploité, audité et étendu**, comme en environnement professionnel.
 
 ---
