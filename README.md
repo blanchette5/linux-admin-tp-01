@@ -12,18 +12,20 @@
 
 ---
 ## 📁 Structure du dépôt
+```text
 LINUX-ADMIN-TP-01/
-├── docs/
+├── README.md
+├── docs/ # Documentation technique
+│ ├── TP1/ # Détails et procédures du TP1
+│ └── TP2/ # Détails et procédures du TP2
+├── scripts/ # Scripts d’automatisation pour administration Linux
+├── logs/ # Logs serveur et tests
 │ ├── TP1/
 │ └── TP2/
-├── logs/
-│ ├── TP1/
-│ └── TP2/
-├── screenshots/
-│ ├── TP1/screenshots/
-│ └── TP2/screenshots/
-└── scripts/
-
+└── screenshots/ # Captures d’écran pour preuve et suivi
+├── TP1/screenshots/
+└── TP2/screenshots/
+```
 ---
 ## 🌐 Procédure générale du TP
 Durant ce TP, nous avons mis en place :
