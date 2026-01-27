@@ -1,42 +1,30 @@
-# 🧪 TP Linux Professionnel — Administration Système  
+# TP LINUX PROFESSIONNEL — ADMIN SYSTÈME (NIVEAU 2)
 
-Ce projet constitue la **suite directe du TP1**.  
-Il se place dans un contexte réaliste où un **serveur Linux déjà déployé** doit être **exploité, audité et étendu**, comme en environnement professionnel.
+## Architecture technique
+- Serveur Debian GNU/Linux 12
+- Services : NGINX
+- User dédié : web_intranet
+- Arborescence :
+  - /srv/web_intranet
+  - /var/log/nginx/
+- Réseau : HTTP 80
 
----
+## Procédure déploiement site intranet
+1. Créer l’utilisateur système
+2. Créer le dossier web
+3. Créer le vhost NGINX
+4. Activer le site
+5. Tester la config
+6. Vérifier les logs
 
-## 🎯 Objectifs du TP2
+## Procédure diagnostic
+- Vérifier service NGINX : `systemctl status nginx`
+- Vérifier config : `nginx -t`
+- Logs : `/var/log/nginx/intranet/`
 
-- Auditer un serveur Linux existant avant toute modification
-- Faire évoluer un service web déjà en place
-- Héberger plusieurs sites web sur un même serveur
-- Isoler les services par utilisateur système et dossier dédié
-- Réaliser des tests et diagnostics simples
-- Maintenir une documentation exploitable par un autre administrateur
 
----
-
-## 🖥️ Environnement
-
-- **OS** : Debian GNU/Linux 12 (Bookworm)
-- **Architecture** : x86_64
-- **Serveur** : SVL-PS-LIN-01
-- **Base existante** : TP1  
-  (Serveur Linux + NGINX + utilisateur dédié `webuser`)
-
----
-
-## 🔄 Contexte professionnel
-
-Le serveur issu du TP1 est désormais **en production dans une PME**.
-
-De nouveaux besoins apparaissent :
-
-- Héberger plusieurs applications internes
-- Garantir une séparation stricte des droits
-- Conserver un serveur maintenable et compréhensible
-- Être capable de diagnostiquer rapidement un incident
-
-Ce TP simule donc une **phase d’exploitation réelle**, après la mise en production initiale.
-
----
+## Axes d’amélioration
+- Restaurer `/etc/nginx` et `/srv/web_intranet` depuis backup
+- Ajouter multi-sites
+- Superviser le serveur
+- Automatiser les backups
