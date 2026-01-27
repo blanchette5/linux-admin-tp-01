@@ -11,9 +11,21 @@
 - **Réseau :** HTTP (port 80)  
 
 ---
+## 📁 Structure du dépôt
+LINUX-ADMIN-TP-01/
+├── docs/
+│ ├── TP1/
+│ └── TP2/
+├── logs/
+│ ├── TP1/
+│ └── TP2/
+├── screenshots/
+│ ├── TP1/screenshots/
+│ └── TP2/screenshots/
+└── scripts/
 
+---
 ## 🌐 Procédure générale du TP
-
 Durant ce TP, nous avons mis en place :
 
 1. **Audit du serveur**
