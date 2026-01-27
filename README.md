@@ -1,15 +1,18 @@
-# 🧪 TP Linux Professionnel — Administration Système
+# 🧪 TP Linux Professionnel — Administration Système  
 
-Ce projet simule la prise en charge d’un **serveur Linux en environnement PME** dans un contexte professionnel réel.
+Ce projet constitue la **suite directe du TP1**.  
+Il se place dans un contexte réaliste où un **serveur Linux déjà déployé** doit être **exploité, audité et étendu**, comme en environnement professionnel.
 
 ---
 
-> 🎯 **Objectifs**
-> 
-> - Mise en place et sécurisation d’un serveur Linux Debian en contexte PME  
-> - Déploiement d’un service web NGINX avec utilisateur système dédié  
-> - Application du principe du moindre privilège et permissions strictes  
-> - Scripts Bash d’automatisation et documentation orientée production
+## 🎯 Objectifs du TP2
+
+- Auditer un serveur Linux existant avant toute modification
+- Faire évoluer un service web déjà en place
+- Héberger plusieurs sites web sur un même serveur
+- Isoler les services par utilisateur système et dossier dédié
+- Réaliser des tests et diagnostics simples
+- Maintenir une documentation exploitable par un autre administrateur
 
 ---
 
@@ -18,56 +21,22 @@ Ce projet simule la prise en charge d’un **serveur Linux en environnement PME*
 - **OS** : Debian GNU/Linux 12 (Bookworm)
 - **Architecture** : x86_64
 - **Serveur** : SVL-PS-LIN-01
-- **Service principal** : NGINX (HTTP)
+- **Base existante** : TP1  
+  (Serveur Linux + NGINX + utilisateur dédié `webuser`)
 
 ---
 
-### Choix techniques notables
+## 🔄 Contexte professionnel
 
-- Création d’un **utilisateur système dédié** au service web (`webuser`)
-- Refus volontaire d’utiliser l’utilisateur par défaut `www-data`
-- Application de **permissions strictes** sur `/srv/web` (770)
-- Séparation claire entre administration (`root`) et service applicatif
+Le serveur issu du TP1 est désormais **en production dans une PME**.
 
+De nouveaux besoins apparaissent :
+
+- Héberger plusieurs applications internes
+- Garantir une séparation stricte des droits
+- Conserver un serveur maintenable et compréhensible
+- Être capable de diagnostiquer rapidement un incident
+
+Ce TP simule donc une **phase d’exploitation réelle**, après la mise en production initiale.
 
 ---
-
-## 📂 Structure du dépôt
-
-```text
-linux-admin-tp-01/
-├── README.md
-├── docs/           # Documentation technique
-│   ├── contexte.md
-│   ├── architecture.md
-│   ├── procedures.md
-│   └── securite.md
-├── scripts/        # Scripts d’automatisation
-│   ├── create_web_user.sh
-│   └── check_nginx.sh
-├── logs/           # Informations sur les logs
-│   └── README.md
-└── assets/         # Captures et supports
-
-```
-## 📸 Preuves visuelles
-
-Des captures d’écran sont disponibles dans `assets/screenshots/` et illustrent :
-
-- l’identification du système
-- la vérification du réseau
-- le déploiement du service NGINX
-- la création d’un utilisateur dédié au service web
-- l’application des permissions et les tests d’accès
-- le diagnostic via scan de ports
-
-
-## 🛠️ Compétences mises en œuvre
-
-- Linux (Debian)
-- Administration système
-- Sécurité système
-- Gestion des utilisateurs et permissions
-- Bash scripting
-- Diagnostic & exploitation
-- Documentation technique
