@@ -1,20 +1,19 @@
-🏗️ Architecture technique — TP2 simplifié
+# 🏗️ Architecture technique — TP2 simplifié
 
-Serveur
-1 serveur Debian GNU/Linux 12
-Accès SSH sécurisé
-Utilisateur administrateur avec droits sudo
-Services
+## 🖥️ Serveur
+- **Système :** Debian GNU/Linux 12  
+- **Utilisateur administrateur :** avec droits `sudo`  (loick)
 
-NGINX (HTTP)
-Utilisateur système dédié pour le site : intranetuser
+## ⚙️ Services
+- **Serveur web :** NGINX (HTTP)  
+- **Utilisateur dédié :** `web_intranet` (pour isoler le site web)  
 
-Arborescence
-/srv/web_intranet : racine web intranet
-/srv/admin : scripts et documentation
-/var/log/nginx/intranet/ : logs du site intranet
+## 🗂️ Arborescence
+| Chemin | Description |
+|--------|------------|
+| `/srv/web_intranet` | Racine web du site intranet |
+| `/srv/admin` | Scripts et documentation |
 
-Réseau
-Accès Internet fonctionnel
-Port SSH (22 ou personnalisé)
-Port HTTP (80)
+## 🌐 Réseau
+- **Accès Internet :** fonctionnel  
+- **Port HTTP :** 80

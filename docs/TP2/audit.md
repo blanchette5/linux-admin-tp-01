@@ -1,22 +1,30 @@
-# Audit serveur
+# 🔍 Audit serveur — TP2
 
-## Utilisateurs
+## 👤 Utilisateurs
+```bash
 getent passwd
-- root
-- intranetuser
-- autres users système
+root
+web_intranet
+autres utilisateurs système
 
-## Groupes
+👥 Groupes
 getent group
 id
 groups
 
-## Services
+Vérifie l’appartenance aux groupes
+Confirme les droits des utilisateurs
+
+⚙️ Services
 systemctl list-units --type=service
+Liste tous les services actifs sur le serveur
+Permet d’identifier ceux qui ne sont pas nécessaires
 
-## Ports
+🌐 Ports ouverts
 ss -tulnp
+Vérifie tous les ports exposés et les programmes qui les utilisent
 
-## Points d’amélioration
-- Supprimer services inutiles
-- Vérifier utilisateurs obsolètes
+📝 Points d’amélioration
+Supprimer les services inutiles
+Vérifier les utilisateurs obsolètes ou non utilisés
+Vérifier les permissions des utilisateurs et groupes

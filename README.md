@@ -1,30 +1,56 @@
-# TP LINUX PROFESSIONNEL — ADMIN SYSTÈME (NIVEAU 2)
+# 🏗️ TP LINUX PROFESSIONNEL — ADMIN SYSTÈME (NIVEAU 2)
 
-## Architecture technique
-- Serveur Debian GNU/Linux 12
-- Services : NGINX
-- User dédié : web_intranet
-- Arborescence :
-  - /srv/web_intranet
-  - /var/log/nginx/
-- Réseau : HTTP 80
+## 🖥️ Architecture technique
+- **Serveur :** Debian GNU/Linux 12  
+- **Services :** NGINX  
+- **Utilisateur dédié :** `web_intranet`  
+- **Arborescence :**
+  - `/srv/web_intranet` → racine du site intranet
+  - `/var/log/nginx/` → logs du serveur
+  - `/srv/admin` → documentation et backups
+- **Réseau :** HTTP (port 80)  
 
-## Procédure déploiement site intranet
-1. Créer l’utilisateur système
-2. Créer le dossier web
-3. Créer le vhost NGINX
-4. Activer le site
-5. Tester la config
-6. Vérifier les logs
+---
 
-## Procédure diagnostic
-- Vérifier service NGINX : `systemctl status nginx`
-- Vérifier config : `nginx -t`
-- Logs : `/var/log/nginx/intranet/`
+## 🌐 Procédure générale du TP
 
+Durant ce TP, nous avons mis en place :
 
-## Axes d’amélioration
-- Restaurer `/etc/nginx` et `/srv/web_intranet` depuis backup
-- Ajouter multi-sites
-- Superviser le serveur
-- Automatiser les backups
+1. **Audit du serveur**
+   - Vérification des utilisateurs, groupes, services et ports actifs  
+   - Identification des points à améliorer pour sécuriser le serveur
+
+2. **Création du site intranet**
+   - Création d’un utilisateur dédié pour le site  
+   - Création de la racine web et définition des permissions  
+   - Création et activation du virtual host NGINX  
+   - Tests de fonctionnement et validation du site
+
+3. **Sécurité et durcissement**
+   - Mise en place des bonnes pratiques pour le service web  
+   - Isolation du site avec un utilisateur dédié  
+   - Préparation pour des améliorations futures (multi-sites, SSH, logs…)
+
+4. **Diagnostic et supervision**
+   - Vérification du fonctionnement du site  
+   - Analyse des logs  
+   - Mise en évidence des incidents simulés et corrections appliquées
+
+5. **Documentation et reprise**
+   - Organisation des logs et documentation des procédures  
+   - Sauvegarde des configurations et du contenu web  
+   - Screenshots réalisés à chaque étape pour preuve et suivi
+
+> Les **commandes utilisées et détails techniques** sont documentés dans les fichiers séparés et les screenshots fournis dans le dossier `/screenshots`.
+
+---
+
+## 💡 Axes d’amélioration à mettre en place pour les prochains TP
+
+- Gestion de **multi-sites** avec utilisateurs et racines web distinctes  
+- Supervision serveur (CPU, RAM, disque, services, statut des sites)  
+- Automatisation des déploiements et backups  
+- Sécurité renforcée : permissions, méthodes HTTP restreintes, ports SSH sécurisés  
+- Organisation des logs par site pour faciliter le diagnostic  
+- Création d’une **page status serveur** pour visualiser uptime, hostname et services  
+- Documentation complète et uniforme pour faciliter la transmission à un autre administrateur
